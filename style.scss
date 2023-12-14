@@ -25,37 +25,48 @@ header {
         font-size: 3vmax;
     }
 }
-main {
-    height: 80%;
-}
+
 
 #gallery_container {
     display: flex;
     flex-direction: row;
+    gap: 1em;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    
-    height: 50%;
+    padding: 5%;
+    height: 40%;
 }
 
 .image_container {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    box-sizing: content-box;
     width: 100%;
+    border: solid 3px;
+    padding: 5px;
+    background-color: white;
+
 
     h2 {
         font-size: 1.8vmax;
         padding: 5px;
-        background-color: white;
+    
     }
     .image{
-        height: 50%;
-        width: 20%;
-
+        width: 60%;
+        padding: 3%;
     }
+
+    .descripcion{
+        box-sizing: content-box;
+        width: 100%;
+        border: solid 1px;
+        padding: 3px;
+        align-items: center;
+    }
+
 }
 
 
@@ -75,7 +86,6 @@ main {
     
     .image_container {
 
-        width: 25%;
     
         h2 {
             font-size: 1.5vmax;
@@ -106,6 +116,8 @@ main {
     .image_container {
 
         width: 50%;
+        display: flex;
+        flex-direction: column;
     
         h2 {
             font-size: 2.5vmax;
