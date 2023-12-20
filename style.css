@@ -1,104 +1,28 @@
-html, body {
-  min-height: 100%;
-  min-width: 100%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
 body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: gray;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: white;
-  height: 80px;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-}
-header h1 {
-  font-size: 3vmax;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
 }
 
-#gallery_container {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 5%;
-  height: 40%;
+.item {
+  text-align: center;
 }
 
-.image_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: content-box;
-  width: 100%;
-  border: solid 3px;
-  padding: 5px;
-  background-color: white;
-}
-.image_container h2 {
-  font-size: 1.8vmax;
-  padding: 5px;
-}
-.image_container .image {
-  width: 60%;
-  padding: 3%;
-}
-.image_container .descripcion {
-  box-sizing: content-box;
-  width: 100%;
-  border: solid 1px;
-  padding: 3px;
-  align-items: center;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-@media only screen and (min-width: 1366px) {
-  header {
-    margin-bottom: 20px;
-    height: 120px;
-  }
-  header h1 {
-    font-size: 1.8vmax;
-  }
-  #gallery_container {
-    padding: 5px;
-  }
-  .image_container h2 {
-    font-size: 1.5vmax;
-  }
-  .image {
-    padding: 5px;
-    border: 5px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  header {
-    margin-bottom: 20px;
-    height: 120px;
-  }
-  header h1 {
-    font-size: 3vmax;
-  }
-  #gallery_container {
-    padding: 5px;
-  }
-  .image_container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-  }
-  .image_container h2 {
-    font-size: 2.5vmax;
-  }
-  .image {
-    padding: 5px;
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */
